@@ -1,0 +1,852 @@
+<html>
+
+<head>
+    <title>
+        FitApp
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-color {
+            color: #fff;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header nav {
+            margin-top: 10px;
+        }
+
+        .header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .header nav a:hover {
+            color: #fff;
+        }
+
+        .header .cta {
+            margin-top: 10px;
+        }
+
+        .header .cta a {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(180deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: space-around;
+            justify-content: space-around;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero .buttons a {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .hero img {
+            max-width: 600px;
+            max-height: 550px;
+        }
+
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .about h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about .stats {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .about .stats div {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .about .stats div h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about .stats div p {
+            font-size: 16px;
+        }
+
+        .about .view-more {
+            margin-top: 30px;
+        }
+
+        .about .view-more a {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .features {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .features h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .features .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .features .feature {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: left;
+        }
+
+        .features .feature i {
+            font-size: 24px;
+            color: #6a11cb;
+            margin-bottom: 10px;
+        }
+
+        .features .feature h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .features .feature p {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header nav {
+            margin-top: 10px;
+        }
+
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .header .btn {
+            background-color: #6a11cb;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        .pricing .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 15px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .pricing .card h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .pricing .card .price {
+            font-size: 36px;
+            margin: 20px 0;
+            color: #6a11cb;
+        }
+
+        .pricing .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .pricing .card ul li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .pricing .card .btn {
+            background-color: #6a11cb;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .testimonials {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .testimonials h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .testimonials .testimonial {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .testimonials .testimonial .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 15px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonials .testimonial .card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+
+        .testimonials .testimonial .card h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .testimonials .testimonial .card p {
+            color: #666;
+        }
+
+        .testimonials .testimonial .card .stars {
+            color: #f39c12;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .contact h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact form .btn {
+            background-color: #6a11cb;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer .columns {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .footer .column {
+            margin: 0 15px;
+            text-align: left;
+        }
+
+        .footer .column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .footer .column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer .column ul li {
+            margin: 10px 0;
+        }
+
+        .footer .column ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer .newsletter {
+            margin-top: 30px;
+        }
+
+        .footer .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .footer .newsletter .btn {
+            background-color: #fff;
+            color: #6a11cb;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                FitApp
+            </div>
+            <nav>
+                <div class="navbar-color">
+                    <b> <a href="#home"> Home</a></b>
+                    <b> <a href="#about"> About</a></b>
+                    <b> <a href="#features"> Features</a></b>
+                    <b> <a href="#pricing"> Pricing</a></b>
+                    <b> <a href="#contact"> Contact</a></b>
+                </div>
+
+            </nav>
+            <div class="cta">
+                <a href="#" id="get-started">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="hero" id="home">
+        <div class="hero-section">
+            <div class="text">
+                <h1>
+                    The Revolutionary App <br> That Helps To Control <br> Your Own Fitness
+                </h1>
+                <p>
+                    Track your workouts, monitor your progress,<br> and achieve your fitness goals with <br> our
+                    easy-to-use app.
+                </p>
+                <div class="buttons">
+                    <a href="#">
+                        Learn More
+                    </a>
+                    <a href="#">
+                        Download
+                    </a>
+                </div>
+            </div>
+            <img alt="Mobile app screenshot showing fitness tracking features" height="400"
+                src=".\imgs\fit_marketing.webp"
+                width="300" />
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h2>
+            #1 App For Your Fitness
+        </h2>
+        <div class="stats">
+            <div>
+                <h3>
+                    1234
+                </h3>
+                <p>
+                    Active Users
+                </p>
+            </div>
+            <div>
+                <h3>
+                    1234
+                </h3>
+                <p>
+                    Positive Reviews
+                </p>
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">
+                View More
+            </a>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <h2>
+            Awesome Features
+        </h2>
+        <div class="feature-list">
+            <div class="feature">
+                <i class="fas fa-highlighter">
+                </i>
+                <h3>
+                    High Resolution
+                </h3>
+                <p>
+                    Enjoy a crystal clear display with our high-resolution interface.
+                </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-bolt">
+                </i>
+                <h3>
+                    Battery Ready
+                </h3>
+                <p>
+                    Optimized to save battery life while providing top performance.
+                </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-chart-line">
+                </i>
+                <h3>
+                    Editable Charts
+                </h3>
+                <p>
+                    Customize your progress charts to suit your needs.
+                </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lock">
+                </i>
+                <h3>
+                    Fully Secured
+                </h3>
+                <p>
+                    Your data is safe with our top-notch security features.
+                </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-cloud">
+                </i>
+                <h3>
+                    Cloud Storage
+                </h3>
+                <p>
+                    Access your data from anywhere with our cloud storage solution.
+                </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-mobile-alt">
+                </i>
+                <h3>
+                    Fully Responsive
+                </h3>
+                <p>
+                    Our app looks great on any device, big or small.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.getElementById('get-started').addEventListener('click', function () {
+            alert('Get Started button clicked!');
+        });
+    </script>
+    <div class="pricing">
+        <div class="card">
+            <h3>
+                Starter Plan
+            </h3>
+            <div class="price">
+                $14.99/month
+            </div>
+            <ul>
+                <li>
+                    10 GB Storage
+                </li>
+                <li>
+                    100 GB Bandwidth
+                </li>
+                <li>
+                    24/7 Support
+                </li>
+            </ul>
+            <a class="btn" href="#">
+                Get Started
+            </a>
+        </div>
+        <div class="card">
+            <h3>
+                Advance Plan
+            </h3>
+            <div class="price">
+                $24.99/month
+            </div>
+            <ul>
+                <li>
+                    50 GB Storage
+                </li>
+                <li>
+                    500 GB Bandwidth
+                </li>
+                <li>
+                    24/7 Support
+                </li>
+            </ul>
+            <a class="btn" href="#">
+                Get Started
+            </a>
+        </div>
+        <div class="card">
+            <h3>
+                Premium Plan
+            </h3>
+            <div class="price">
+                $34.99/month
+            </div>
+            <ul>
+                <li>
+                    100 GB Storage
+                </li>
+                <li>
+                    Unlimited Bandwidth
+                </li>
+                <li>
+                    24/7 Support
+                </li>
+            </ul>
+            <a class="btn" href="#">
+                Get Started
+            </a>
+        </div>
+    </div>
+    <div class="testimonials">
+        <h2>
+            What Say Our Clients!
+        </h2>
+        <div class="testimonial">
+            <div class="card">
+                <img alt="Client Image" height="80" src="istockphoto-1369508766-612x612.jpg" width="80" />
+                <h3>
+                    Client Name
+                </h3>
+                <div class="stars">
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                </p>
+            </div>
+            <div class="card">
+                <img alt="Client Image" height="80" src="pexels-moose-photos-170195-1036623.jpg" width="80" />
+                <h3>
+                    Client Name
+                </h3>
+                <div class="stars">
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                </p>
+            </div>
+            <div class="card">
+                <img alt="Client Image" height="80" src="istockphoto-1399565382-612x612.jpg" width="80" />
+                <h3>
+                    Client Name
+                </h3>
+                <div class="stars">
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                    <i class="fas fa-star">
+                    </i>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <h2>
+            Get In Touch!
+        </h2>
+        <form id="contactForm">
+            <input id="name" name="name" placeholder="Your Name" type="text" />
+            <input id="email" name="email" placeholder="Your Email" type="email" />
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            <button class="btn" type="submit">
+                Send Message
+            </button>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="columns">
+            <div class="column">
+                <h3>
+                    Address
+                </h3>
+                <ul>
+                    <li>
+                        123 Street Name
+                    </li>
+                    <li>
+                        City, State, 12345
+                    </li>
+                    <li>
+                        Country
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>
+                    Quick Links
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>
+                    Popular Links
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="newsletter">
+            <input placeholder="Your Email" type="email" />
+            <a class="btn" href="#">
+                Subscribe
+            </a>
+        </div>
+        <p>
+            © 2023 Company Name. All rights reserved.
+        </p>
+    </div>
+    <script>
+        // Testimonial Slider
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial .card');
+        const totalTestimonials = testimonials.length;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+        }
+
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % totalTestimonials;
+            showTestimonial(currentIndex);
+        }
+
+        function prevTestimonial() {
+            currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+            showTestimonial(currentIndex);
+        }
+
+        setInterval(nextTestimonial, 3000);
+
+        // Form Validation
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields.');
+            } else {
+                alert('Message sent successfully!');
+                document.getElementById('contactForm').reset();
+            }
+        });
+    </script>
+</body>
+
+</html>
